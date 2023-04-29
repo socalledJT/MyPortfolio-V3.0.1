@@ -1,6 +1,15 @@
 :root {
     --background-color: #082032;
+    --outliner-color: #26D8FF;
+    --socials-background: #0C2F49;
+    --infocard-background: #0B2538;
+    --nav-bar-color: #00E35D;
+    --nav-icon-color: #0B2538;
 }
+
+/* > div {
+    border: 1px solid white;
+}*/
 
 *{
     scroll-behavior: smooth;
@@ -28,4 +37,262 @@ p {
     color: white;
     font-weight: lighter;
     opacity: 80%;
+}
+
+ul, li {
+    list-style: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 90%;
+    color: aqua;
+    border: 0;
+    border-top: 1px solid #26D8FF;
+    margin: 0.5em auto;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    background: none;
+    border-color: var(--outliner-color);
+    border-radius: 30pc;
+    color: var(--outliner-color);
+}
+
+button:hover {
+    background-color: var(--outliner-color);
+    color: var(--background-color);
+    transition: 500ms;
+}
+
+.socials-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em 1em 1em;
+    position: fixed;
+    z-index: 99;
+    animation: fadeIn linear 2s;
+
+    .social-container {
+        background-color: var(--socials-background);
+        width: 150px;
+        height: 30px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 0 0 15px 15px;
+
+        .nickname {
+            background-color: var(--socials-background);
+            font-style: italic;
+            
+        }
+    }
+
+    .socials-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        height: 30px;
+        background-color: var(--socials-background);
+        border-radius: 0 0 15px 15px;
+        top: 0;
+
+        .social-link {
+            padding: 0 15px;
+            background-color: var(--socials-background);
+        }
+
+        .social-icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.home {
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+    .title-subtitle {
+        min-width: 300px;
+        max-width: 500px;
+
+        .title {
+            text-align: center;
+            margin: 1em;
+        }
+    
+        .subtitle {
+            text-align: center;
+            margin: 1em
+        }
+    }
+
+    .infocard {
+        margin: 2em 0;
+        width: 300px;
+        height: 225px;
+        display: grid;
+        grid-template-rows: 25% 55% 20%;
+        background-color: var(--infocard-background);
+        border-radius: 20px;
+        box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+        margin-left: auto;
+        margin-right: auto;
+
+        .card-title, h3 {
+            background: none;
+
+            .cardTitle-text {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 15px;
+            }
+        }
+
+        .mainInfo-card, p {
+            background: none;
+            text-align: center;
+        }
+
+        .btn-container {
+            background: none;
+            text-align: center;
+        }
+    }
+
+    .scroll-container {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        animation: updown 2s ease infinite;
+
+        // Animation for the Scroll Icon
+        @keyframes updown { // Declaration and name
+            0% {
+            transform: translateY(-10%); // Different transitions
+         }
+  
+            50% {
+              transform: translateY(10%);
+            }
+  
+            100% {
+              transform: translateY(-10%);
+            }
+        }
+    }
+
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+    
+    //Animation for the Hero Home Section
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+}
+
+.nav-container {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    
+
+    .nav-bar {
+        width: 300px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--nav-bar-color);
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+
+        .navlist-container {
+            display: flex;
+            justify-content: space-between;
+            width: 280px;
+            background: none;
+
+            .nav-list {
+                position: relative;
+                width: 100%;
+                background: none;
+                list-style: none;
+                z-index: 101;
+
+                a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: transparent;
+                    width: 100%;
+                }
+
+
+                .nav-icon {
+                    position: relative;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    background: none;
+                    color: var(--nav-icon-color);
+
+                    .icon {
+                        background: none;
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .icon.active {
+                        color: var(--nav-bar-color);
+                        transition: 0.5s;
+                    }
+                }
+
+            }
+
+            .nav-list.active {
+                background-color: var(--background-color);
+                transition: 0.5s;
+            }
+
+
+            .rectangle {
+                display: none;
+                position: absolute;
+                width: 50px;
+                height: 40px;
+                background: var(--background-color);
+                border-radius: 10px;
+                left: 3px;
+                margin-top: 2px;
+                top: 0;
+                z-index: 100;
+            }
+
+        }
+    }
 }
