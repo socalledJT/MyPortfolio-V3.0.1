@@ -231,23 +231,25 @@ button:hover {
 .nav-container .nav-bar .navlist-container .nav-list .nav-icon {
   position: relative;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 40px;
   text-align: center;
   background: none;
   color: var(--nav-icon-color);
 }
 .nav-container .nav-bar .navlist-container .nav-list .nav-icon .icon {
   background: none;
+  padding: 5px;
   width: 30px;
   height: 30px;
 }
-.nav-container .nav-bar .navlist-container .nav-list .nav-icon .icon.active {
+.nav-container .nav-bar .navlist-container .nav-list .nav-icon .icon:hover {
   color: var(--nav-bar-color);
   transition: 0.5s;
 }
-.nav-container .nav-bar .navlist-container .nav-list.active {
+.nav-container .nav-bar .navlist-container .nav-list .nav-icon:hover {
   background-color: var(--background-color);
+  border-radius: 10px;
   transition: 0.5s;
 }
 .nav-container .nav-bar .navlist-container .rectangle {
@@ -261,4 +263,8 @@ button:hover {
   margin-top: 2px;
   top: 0;
   z-index: 100;
+}
+.nav-container .nav-bar .navlist-container .rectangle.active {
+  display: block;
+  animation: fadeIn linear 0.5s;
 }/*# sourceMappingURL=style.css.map */

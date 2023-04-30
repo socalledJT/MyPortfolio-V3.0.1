@@ -236,6 +236,7 @@ button:hover {
 
             .nav-list {
                 position: relative;
+                
                 width: 100%;
                 background: none;
                 list-style: none;
@@ -254,29 +255,31 @@ button:hover {
                 .nav-icon {
                     position: relative;
                     display: block;
-                    width: 30px;
-                    height: 30px;
+                    width: 50px;
+                    height: 40px;
                     text-align: center;
                     background: none;
                     color: var(--nav-icon-color);
 
                     .icon {
                         background: none;
+                        padding: 5px;
                         width: 30px;
                         height: 30px;
                     }
 
-                    .icon.active {
+                    .icon:hover {
                         color: var(--nav-bar-color);
                         transition: 0.5s;
                     }
                 }
 
-            }
+                .nav-icon:hover {
+                    background-color: var(--background-color);
+                    border-radius: 10px;
+                    transition: 0.5s;
+                }
 
-            .nav-list.active {
-                background-color: var(--background-color);
-                transition: 0.5s;
             }
 
 
@@ -292,6 +295,12 @@ button:hover {
                 top: 0;
                 z-index: 100;
             }
+
+            .rectangle.active {
+                display: block;
+                animation: fadeIn linear 0.5s;
+            }
+
 
         }
     }

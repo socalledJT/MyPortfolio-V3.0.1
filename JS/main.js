@@ -1,9 +1,16 @@
-const iconLink = document.querySelector(".icon-link");
-const nav = document.querySelector(".icon");
-const navList = document.querySelector(".nav-list");
+const icon = document.querySelector(".icon");
+const rectangle = document.querySelector(".rectangle");
 
-iconLink.addEventListener("click", () =>{
-    iconLink.classList.toggle("active");
+icon.addEventListener("click", () =>{
     icon.classList.toggle("active");
-    navList.classList.toggle("active");
+    rectangle.classList.toggle("active");
 })
+
+function avtiveLink() {
+    icon.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+}
+
+icon.forEach((item) =>
+item.addEventListener('click', activeLink));
