@@ -119,6 +119,8 @@ button:hover {
 .home .title-subtitle {
   min-width: 300px;
   max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .home .title-subtitle .title {
   text-align: center;
@@ -186,85 +188,52 @@ button:hover {
   }
 }
 
-.nav-container {
+.navbar {
   position: fixed;
-  right: 0;
+  bottom: 3em;
   left: 0;
-  bottom: 0;
-  margin-bottom: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
-.nav-container .nav-bar {
+  right: 0;
+  background-color: #00E35D;
   width: 300px;
   height: 45px;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--nav-bar-color);
-  position: relative;
-  display: flex;
+  justify-content: space-around;
   align-items: center;
   border-radius: 10px;
 }
-.nav-container .nav-bar .navlist-container {
-  display: flex;
-  justify-content: space-between;
-  width: 280px;
+
+.navbar a {
   background: none;
-}
-.nav-container .nav-bar .navlist-container .nav-list {
-  position: relative;
-  width: 100%;
-  background: none;
-  list-style: none;
-  z-index: 101;
-}
-.nav-container .nav-bar .navlist-container .nav-list a {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
-  width: 100%;
-}
-.nav-container .nav-bar .navlist-container .nav-list .nav-icon {
-  position: relative;
-  display: block;
-  width: 50px;
-  height: 40px;
-  text-align: center;
-  background: none;
-  color: var(--nav-icon-color);
-}
-.nav-container .nav-bar .navlist-container .nav-list .nav-icon .icon {
-  background: none;
-  padding: 5px;
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 }
-.nav-container .nav-bar .navlist-container .nav-list .nav-icon .icon:hover {
-  color: var(--nav-bar-color);
-  transition: 0.5s;
-}
-.nav-container .nav-bar .navlist-container .nav-list .nav-icon:hover {
-  background-color: var(--background-color);
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.nav-container .nav-bar .navlist-container .rectangle {
-  display: none;
-  position: absolute;
+
+.navbar a.active {
+  background-color: #082032;
   width: 50px;
-  height: 40px;
-  background: var(--background-color);
+  height: 35px;
   border-radius: 10px;
-  left: 3px;
-  margin-top: 2px;
-  top: 0;
-  z-index: 100;
+  transition: 0.5s;
 }
-.nav-container .nav-bar .navlist-container .rectangle.active {
-  display: block;
-  animation: fadeIn linear 0.5s;
+
+.navbar a i {
+  color: #082032;
+  background: none;
+}
+
+.navbar a.active i {
+  color: #00E35D;
+  transition: 0.5s;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  background: none;
 }/*# sourceMappingURL=style.css.map */

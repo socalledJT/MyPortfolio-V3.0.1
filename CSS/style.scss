@@ -123,6 +123,8 @@ button:hover {
     .title-subtitle {
         min-width: 300px;
         max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
 
         .title {
             text-align: center;
@@ -206,102 +208,52 @@ button:hover {
     }
 }
 
-.nav-container {
+.navbar {
     position: fixed;
-    right: 0;
+    bottom: 3em;
     left: 0;
-    bottom: 0;
-    margin-bottom: 2em;
+    right: 0;
+    background-color: #00E35D;
+    width: 300px;
+    height: 45px;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+  
+.navbar a {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+  
+.navbar a.active {
+    background-color: #082032;
+    width: 50px;
+    height: 35px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+  
+.navbar a i {
+    color: #082032;
+    background: none;
+}
+  
+.navbar a.active i {
+    color: #00E35D;
+    transition: 0.5s;
+}
 
-    .nav-bar {
-        width: 300px;
-        height: 45px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: var(--nav-bar-color);
-        position: relative;
-        display: flex;
-        align-items: center;
-        border-radius: 10px;
-
-        .navlist-container {
-            display: flex;
-            justify-content: space-between;
-            width: 280px;
-            background: none;
-
-            .nav-list {
-                position: relative;
-                
-                width: 100%;
-                background: none;
-                list-style: none;
-                z-index: 101;
-
-                a {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: transparent;
-                    width: 100%;
-                }
-
-
-                .nav-icon {
-                    position: relative;
-                    display: block;
-                    width: 50px;
-                    height: 40px;
-                    text-align: center;
-                    background: none;
-                    color: var(--nav-icon-color);
-
-                    .icon {
-                        background: none;
-                        padding: 5px;
-                        width: 30px;
-                        height: 30px;
-                    }
-
-                    .icon:hover {
-                        color: var(--nav-bar-color);
-                        transition: 0.5s;
-                    }
-                }
-
-                .nav-icon:hover {
-                    background-color: var(--background-color);
-                    border-radius: 10px;
-                    transition: 0.5s;
-                }
-
-            }
-
-
-            .rectangle {
-                display: none;
-                position: absolute;
-                width: 50px;
-                height: 40px;
-                background: var(--background-color);
-                border-radius: 10px;
-                left: 3px;
-                margin-top: 2px;
-                top: 0;
-                z-index: 100;
-            }
-
-            .rectangle.active {
-                display: block;
-                animation: fadeIn linear 0.5s;
-            }
-
-
-        }
-    }
+.icon {
+      width: 25px;
+      height: 25px;
+      background: none;
 }

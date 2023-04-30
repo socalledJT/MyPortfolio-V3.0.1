@@ -1,16 +1,18 @@
-const icon = document.querySelector(".icon");
-const rectangle = document.querySelector(".rectangle");
-
-icon.addEventListener("click", () =>{
-    icon.classList.toggle("active");
-    rectangle.classList.toggle("active");
-})
-
-function avtiveLink() {
-    icon.forEach((item) =>
-    item.classList.remove('active'));
-    this.classList.add('active');
-}
-
-icon.forEach((item) =>
-item.addEventListener('click', activeLink));
+ // Get the navbar links
+ var navbarLinks = document.getElementsByClassName("navbar")[0].getElementsByTagName("a");
+    
+ // Set the home icon as active by default
+ navbarLinks[0].classList.add("active");
+ 
+ // Add event listeners to each navbar link
+ for (var i = 0; i < navbarLinks.length; i++) {
+   navbarLinks[i].addEventListener("click", function() {
+     // Remove the "active" class from all links
+     for (var j = 0; j < navbarLinks.length; j++) {
+       navbarLinks[j].classList.remove("active");
+     }
+ 
+     // Add the "active" class to the clicked link
+     this.classList.add("active");
+   });
+ }
