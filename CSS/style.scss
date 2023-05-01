@@ -5,6 +5,7 @@
     --infocard-background: #0B2538;
     --nav-bar-color: #00E35D;
     --nav-icon-color: #0B2538;
+    --white-color: #ffffff;
 }
 
 /* > div {
@@ -13,28 +14,31 @@
 
 *{
     scroll-behavior: smooth;
-    background-color: var(--background-color);
 
     box-sizing: border-box;
     //Setting default margin and padding to 0
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif; //Font of the text width sans-serif fallback
-    overflow-x: hidden; // doesn't do anything right now
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--white-color);
 }
 
 h1, h2, h3 {
-    color: white;
+    color: var(--white-color);
     font-style: italic;
 }
 
 p {
-    color: white;
+    color: var(--white-color);
     font-weight: lighter;
     opacity: 80%;
 }
@@ -47,9 +51,9 @@ hr {
     display: block;
     height: 1px;
     width: 90%;
-    color: aqua;
+    color: var(--outliner-color);
     border: 0;
-    border-top: 1px solid #26D8FF;
+    border-top: 1px solid var(--outliner-color);
     margin: 0.5em auto;
 }
 
@@ -67,6 +71,13 @@ button:hover {
     color: var(--background-color);
     transition: 500ms;
 }
+
+span {
+    color: white;
+    content: "";
+}
+
+//Fixed Social links design
 
 .socials-nav {
     width: 100%;
@@ -114,10 +125,13 @@ button:hover {
     }
 }
 
+//Mobile Design of Home Section
+
 .home {
     margin-top: 5em;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10em;
     width: 90%;
 
     .title-subtitle {
@@ -150,7 +164,6 @@ button:hover {
         margin-right: auto;
 
         .card-title, h3 {
-            background: none;
 
             .cardTitle-text {
                 width: 90%;
@@ -161,12 +174,10 @@ button:hover {
         }
 
         .mainInfo-card, p {
-            background: none;
             text-align: center;
         }
 
         .btn-container {
-            background: none;
             text-align: center;
         }
     }
@@ -208,18 +219,34 @@ button:hover {
     }
 }
 
-.navbar {
+.nav-container {
+    //background-color: var(--outliner-color);
+    background: none;
+    width: 80%;
+    min-width: 300px;
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     bottom: 3em;
     left: 0;
     right: 0;
-    background-color: #00E35D;
+    margin-left: auto;
+    margin-right: auto;
+
+    z-index: 99;
+}
+
+.navbar {
+    background-color: var(--nav-bar-color);
     width: 300px;
     height: 45px;
     display: flex;
+    justify-content: space-around;
+
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-around;
     align-items: center;
     border-radius: 10px;
 }
@@ -235,7 +262,7 @@ button:hover {
 }
   
 .navbar a.active {
-    background-color: #082032;
+    background-color: var(--background-color);
     width: 50px;
     height: 35px;
     border-radius: 10px;
@@ -243,17 +270,263 @@ button:hover {
 }
   
 .navbar a i {
-    color: #082032;
+    color: var(--background-color);
     background: none;
 }
   
 .navbar a.active i {
-    color: #00E35D;
+    color: var(--nav-bar-color);
     transition: 0.5s;
 }
 
 .icon {
-      width: 25px;
-      height: 25px;
-      background: none;
+    width: 25px;
+    height: 25px;
+    background: none;
+}
+
+.homeBtn {
+    width: 45px;
+    height: 45px;
+    background-color: var(--nav-bar-color);
+
+    align-items: center;
+    border-radius: 10px;
+
+    display: none;
+}
+
+.homeBtn a {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+
+}
+
+.homeBtn a:hover {
+    background-color: var(--background-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.homeBtn a i {
+    color: var(--background-color);
+    background: none;
+}
+
+.homeBtn a:hover i {
+    color: var(--nav-bar-color);
+    transition: 0.5s;
+}
+
+.upBtn {
+    width: 25px;
+    height: 25px;
+    background: none;
+}
+
+//Mobile & Desktop Design of 'MyWork' Section
+
+.sectionpin {
+    margin-bottom: 3em;
+}
+
+.myWork {
+    min-width: 300px;
+    width: 80%;
+    max-width: 1300px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10em;
+
+    #workCard1 {
+        border-color: var(--outliner-color);
+        border-radius: 20px 0 20px 0;
+    }
+
+    #workCard2 {
+        border-color: var(--white-color);
+        border-radius: 20px;
+    }
+
+    #workCard3 {
+        border-color: var(--nav-bar-color);
+        border-radius: 0 20px 0 20px;
+    }
+
+    .workInfocard {
+        width: 300px;
+        height: 450px;
+        display: grid;
+        grid-template-rows: 20% 65% 15%;
+        background-color: var(--infocard-background);
+        margin: 1em;
+
+        border: 1px solid var(--outliner-color);
+        border-radius: 20px;
+    
+        .worktitle {
+    
+            .worktitle-text {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 15px;
+            }
+        }
+    
+        .workinfo {
+            text-align: center;
+        }
+    
+        .workbtn {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+    
+            .useAppBtn {
+                border: none;
+                background-color: var(--socials-background);
+                color: var(--nav-bar-color);
+            }
+    
+            .seeMoreBtn {
+                border: none;
+                background-color: var(--socials-background);
+                color: var(--outliner-color);
+            }
+        }
+    }
+}
+
+.myWork::-webkit-scrollbar { 
+    display: none; 
+}
+
+//Mobile Design of 'About Me Section
+
+.aboutMe {
+    min-width: 300px;
+    width: 80%;
+    max-width: 1150px;
+    min-height: 416px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10em;
+
+    display: grid;
+    grid-template-rows: 25% 55% 20%;
+
+    background-color: var(--infocard-background);
+    border-radius: 20px;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+
+    .aboutTitle {
+
+        .about-title {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+    }
+
+    .about-info {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aboutBtn {
+        display: flex;
+        justify-content: space-around;
+        margin: 1em;
+
+        .resumeBtn {
+            border-color: var(--nav-bar-color);
+            color: var(--nav-bar-color);
+        }
+    }
+}
+
+//Mobile & Desktop design of 'MySkills' section
+
+.mySkills {
+    min-width: 300px;
+    width: 80%;
+    max-width: 1300px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10em;
+
+    .s-card1 {
+        border: 1px solid var(--outliner-color);
+        border-radius: 20px 0 20px 0;
+    }
+
+    .s-card2 {
+        border: 1px solid var(--white-color);
+        border-radius: 20px;
+    }
+
+    .s-card3 {
+        border: 1px solid var(--nav-bar-color);
+        border-radius: 0 20px 0 20px;
+    }
+
+    .skillsInfocards {
+        width: 300px;
+        height: 320px;
+
+        background-color: var(--infocard-background);
+        margin: 1em;
+
+        display: grid;
+        grid-template-rows: 20% 40% 40%;
+
+        .skill-title {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        .skill-layout {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3em;
+        }
+
+        .skillIcon {
+            margin: 1em;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+}
+
+.mySkills::-webkit-scrollbar { 
+    display: none; 
 }
