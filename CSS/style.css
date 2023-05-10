@@ -77,7 +77,7 @@ span {
 .socials-nav {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 1em 1em 1em;
   position: fixed;
   z-index: 99;
@@ -175,13 +175,13 @@ span {
 }
 @keyframes updown {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(-20%);
   }
   50% {
-    transform: translateY(10%);
+    transform: translateY(20%);
   }
   100% {
-    transform: translateY(-10%);
+    transform: translateY(-20%);
   }
 }
 @keyframes fadeIn {
@@ -200,7 +200,7 @@ span {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   bottom: 3em;
   left: 0;
@@ -216,8 +216,6 @@ span {
   height: 45px;
   display: flex;
   justify-content: space-around;
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
   border-radius: 10px;
 }
@@ -356,10 +354,16 @@ span {
   background-color: var(--socials-background);
   color: var(--nav-bar-color);
 }
+.myWork .workInfocard .workbtn .useAppBtn:hover {
+  background-color: var(--background-color);
+}
 .myWork .workInfocard .workbtn .seeMoreBtn {
   border: none;
   background-color: var(--socials-background);
   color: var(--outliner-color);
+}
+.myWork .workInfocard .workbtn .seeMoreBtn:hover {
+  background-color: var(--background-color);
 }
 
 .myWork::-webkit-scrollbar {
@@ -400,6 +404,10 @@ span {
 .aboutMe .aboutBtn .resumeBtn {
   border-color: var(--nav-bar-color);
   color: var(--nav-bar-color);
+}
+.aboutMe .aboutBtn .resumeBtn:hover {
+  background-color: var(--nav-bar-color);
+  color: var(--background-color);
 }
 
 .mySkills {
@@ -444,7 +452,7 @@ span {
 .mySkills .skillsInfocards .skill-layout {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3em;
+  margin-top: 1em;
 }
 .mySkills .skillsInfocards .skillIcon {
   margin: 1em;
@@ -454,4 +462,139 @@ span {
 
 .mySkills::-webkit-scrollbar {
   display: none;
+}
+
+.email {
+  min-width: 300px;
+  width: 80%;
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10em;
+  text-align: center;
+}
+.email .email-title {
+  margin: 2em;
+}
+.email .email-title .emailTitle {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.email .email-title .emailSubtitle {
+  text-align: center;
+}
+.email .contact-nested {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 300px;
+  margin: 1em auto 1em auto;
+}
+.email .email-input {
+  width: 150px;
+}
+.email .itxt1 {
+  margin-right: 2px;
+}
+.email .itxt2 {
+  margin-left: 3px;
+}
+.email .input-text {
+  width: 145px;
+  height: 30px;
+  background-color: var(--infocard-background);
+  border: 1px solid var(--outliner-color);
+  border-radius: 5px;
+}
+.email .input-text::-moz-placeholder {
+  padding-left: 0.5em;
+}
+.email .input-text::placeholder {
+  padding-left: 0.5em;
+}
+.email .context-input {
+  margin-bottom: 1em;
+}
+.email .context-input .input-textarea {
+  width: 300px;
+  background-color: var(--infocard-background);
+  border: 1px solid var(--outliner-color);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.email .context-input .input-textarea::-moz-placeholder {
+  padding: 1em;
+}
+.email .context-input .input-textarea::placeholder {
+  padding: 1em;
+}
+.email .input-button {
+  width: 300px;
+  height: 30px;
+}
+
+@media screen and (min-width: 820px) {
+  button {
+    width: 180px;
+    height: 35px;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .nav-container {
+    justify-content: space-between;
+  }
+  .nav-container .homeBtn {
+    display: block;
+  }
+  .home .title-subtitle {
+    margin-bottom: 5em;
+  }
+  .home .infocard {
+    width: 500px;
+    height: 350px;
+  }
+  .home .infocard .card-title {
+    margin-top: 1em;
+  }
+  .home .infocard .btn-container {
+    margin-top: 0.5em;
+  }
+  .email .contact-nested {
+    width: 600px;
+  }
+  .email .email-input {
+    width: 300px;
+  }
+  .email .email-input .input-text {
+    width: 295px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .email .context-input {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .email .context-input .input-textarea {
+    width: 600px;
+    height: 310px;
+    border-radius: 10px;
+  }
+  .email .input-button {
+    width: 600px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .aboutBtn {
+    width: 50%;
+  }
+  .useAppBtn {
+    width: 100px;
+    height: 30px;
+  }
+  .seeMoreBtn {
+    width: 100px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

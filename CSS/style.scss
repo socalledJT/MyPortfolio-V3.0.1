@@ -82,7 +82,7 @@ span {
 .socials-nav {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 1em 1em 1em;
     position: fixed;
     z-index: 99;
@@ -193,15 +193,15 @@ span {
         // Animation for the Scroll Icon
         @keyframes updown { // Declaration and name
             0% {
-            transform: translateY(-10%); // Different transitions
-         }
+            transform: translateY(-20%); // Different transitions
+            }
   
             50% {
-              transform: translateY(10%);
+              transform: translateY(20%);
             }
   
             100% {
-              transform: translateY(-10%);
+              transform: translateY(-20%);
             }
         }
     }
@@ -227,7 +227,7 @@ span {
     height: fit-content;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     bottom: 3em;
     left: 0;
@@ -245,8 +245,6 @@ span {
     display: flex;
     justify-content: space-around;
 
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
     border-radius: 10px;
 }
@@ -401,11 +399,19 @@ span {
                 background-color: var(--socials-background);
                 color: var(--nav-bar-color);
             }
+
+            .useAppBtn:hover {
+                background-color: var(--background-color);
+            }
     
             .seeMoreBtn {
                 border: none;
                 background-color: var(--socials-background);
                 color: var(--outliner-color);
+            }
+
+            .seeMoreBtn:hover {
+                background-color: var(--background-color);
             }
         }
     }
@@ -458,6 +464,11 @@ span {
         .resumeBtn {
             border-color: var(--nav-bar-color);
             color: var(--nav-bar-color);
+        }
+
+        .resumeBtn:hover {
+            background-color: var(--nav-bar-color);
+            color: var(--background-color);
         }
     }
 }
@@ -515,7 +526,7 @@ span {
         .skill-layout {
             margin-left: auto;
             margin-right: auto;
-            margin-top: 3em;
+            margin-top: 1em;
         }
 
         .skillIcon {
@@ -529,4 +540,173 @@ span {
 
 .mySkills::-webkit-scrollbar { 
     display: none; 
+}
+
+.email {
+    min-width: 300px;
+    width: 80%;
+    max-width: 1536px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10em;
+
+    text-align: center;
+
+
+    .email-title {
+        margin: 2em;
+
+        .emailTitle {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    
+        .emailSubtitle {
+            text-align: center;
+        }
+    }
+
+    .contact-nested {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 300px;
+        margin: 1em auto 1em auto;
+    }
+
+    .email-input {
+        width: 150px;
+    }
+
+    .itxt1 {
+        margin-right: 2px;
+    }
+
+    .itxt2 {
+        margin-left: 3px;
+    }
+
+    .input-text {
+        width: 145px;
+        height: 30px;
+        background-color: var(--infocard-background);
+        border: 1px solid var(--outliner-color);
+        border-radius: 5px;
+    }
+
+    .input-text::placeholder {
+        padding-left: 0.5em;
+    }
+
+    .context-input {
+        margin-bottom: 1em;
+        
+        .input-textarea {
+            width: 300px;
+            background-color: var(--infocard-background);
+            border: 1px solid var(--outliner-color);
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input-textarea::placeholder {
+            padding: 1em;
+        }
+    }
+    
+    .input-button {
+        width: 300px;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 820px) {
+
+    button {
+        width: 180px;
+        height: 35px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        //background-color: var(--outliner-color);
+
+        .homeBtn {
+            display: block;
+        }
+    }
+
+    .home {
+
+        .title-subtitle {
+            margin-bottom: 5em;
+        }
+
+        .infocard {
+            width: 500px;
+            height: 350px;
+
+            .card-title {
+                margin-top: 1em;
+            }
+
+            .btn-container {
+                margin-top: 0.5em;
+            }
+        }
+    }
+
+    .email {
+
+        .contact-nested {
+            width: 600px;
+        }
+
+        .email-input {
+            width: 300px;
+
+            .input-text {
+                width: 295px;
+                height: 40px;
+                border-radius: 10px;
+            }
+        }
+
+        .context-input {
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .input-textarea {
+                width: 600px;
+                height: 310px;
+                border-radius: 10px;
+            }
+        }
+
+        .input-button {
+            width: 600px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+    }
+
+    .aboutBtn {
+        width: 50%;
+    }
+
+    .useAppBtn {
+        width: 100px;
+        height: 30px;
+    }
+
+    .seeMoreBtn {
+        width: 100px;
+        height: 30px;
+    }
 }
