@@ -589,6 +589,9 @@ span {
   .aboutBtn {
     width: 50%;
   }
+  .aboutBtn .contactBtn {
+    margin-left: 10px;
+  }
   .useAppBtn {
     width: 100px;
     height: 30px;
@@ -596,5 +599,52 @@ span {
   .seeMoreBtn {
     width: 100px;
     height: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .home {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10em;
+  }
+  .home .title-subtitle {
+    margin: 12em 0 0 0;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .home .title-subtitle .title {
+    text-align: left;
+    margin-left: 0;
+  }
+  .home .title-subtitle .subtitle {
+    text-align: left;
+    margin-left: 0;
+  }
+  .home .infocard {
+    margin-top: 8em;
+    margin-right: 10px;
+  }
+  .home .scroll-container {
+    margin-right: 0;
+  }
+  .email {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .email .email-title {
+    text-align: left;
+    width: 400px;
+  }
+  .email .email-title .emailTitle {
+    text-align: left;
+    margin-top: 7em;
+  }
+  .email .email-title .emailSubtitle {
+    text-align: left;
+  }
+  .email .contact-form {
+    width: -moz-max-content;
+    width: max-content;
   }
 }/*# sourceMappingURL=style.css.map */

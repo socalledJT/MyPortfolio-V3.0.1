@@ -698,6 +698,10 @@ span {
 
     .aboutBtn {
         width: 50%;
+
+        .contactBtn {
+            margin-left: 10px;
+        }
     }
 
     .useAppBtn {
@@ -708,5 +712,63 @@ span {
     .seeMoreBtn {
         width: 100px;
         height: 30px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .home {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 10em;
+
+        .title-subtitle {
+            margin: 12em 0 0 0;
+            height: fit-content;
+
+            .title {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            .subtitle {
+                text-align: left;
+                margin-left: 0;
+            }
+        }
+
+        .infocard {
+            margin-top: 8em;
+            margin-right: 10px;
+        }
+
+        .scroll-container {
+            margin-right: 0;
+        }
+    }
+
+    .email {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .email-title {
+            text-align: left;
+            width: 400px;
+
+            .emailTitle {
+                text-align: left;
+                margin-top: 7em;
+            }
+
+            .emailSubtitle {
+                text-align: left;
+            }
+        }
+
+        .contact-form {
+            width: max-content;
+        }
+
     }
 }
