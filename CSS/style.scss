@@ -6,6 +6,7 @@
     --nav-bar-color: #00E35D;
     --nav-icon-color: #0B2538;
     --white-color: #ffffff;
+    --scrollbar-color: #116D6E;
 }
 
 /* > div {
@@ -75,6 +76,22 @@ button:hover {
 span {
     color: white;
     content: "";
+}
+
+/* Style the vertical scrollbar */
+::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+  
+/* Track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Make the background transparent */
+}
+  
+/* Handle (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color); /* Set the color of the scrollbar handle */
+    border-radius: 10px;
 }
 
 //Fixed Social links design
@@ -329,6 +346,13 @@ span {
 }
 
 //Mobile & Desktop Design of 'MyWork' Section
+
+//fade in function for all other parts of the website.
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
 
 .sectionpin {
     margin-bottom: 3em;
@@ -637,7 +661,7 @@ span {
         //background-color: var(--outliner-color);
 
         .homeBtn {
-            display: block;
+            display: none;
         }
     }
 
@@ -716,6 +740,27 @@ span {
 }
 
 @media screen and (min-width: 1440px) {
+
+    .socials-nav {
+        .social-container {
+            width: 200px;
+            height: 35px;
+
+            .nickname {
+                font-size: 1.2rem;
+            }
+        }
+    
+        .socials-list {
+            width: 200px;
+            height: 35px;
+
+            .social-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
 
     .home {
         width: 80%;

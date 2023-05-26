@@ -6,6 +6,7 @@
   --nav-bar-color: #00E35D;
   --nav-icon-color: #0B2538;
   --white-color: #ffffff;
+  --scrollbar-color: #116D6E;
 }
 
 /* > div {
@@ -72,6 +73,22 @@ button:hover {
 span {
   color: white;
   content: "";
+}
+
+/* Style the vertical scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+/* Track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the background transparent */
+}
+
+/* Handle (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color); /* Set the color of the scrollbar handle */
+  border-radius: 10px;
 }
 
 .socials-nav {
@@ -294,6 +311,11 @@ span {
   width: 25px;
   height: 25px;
   background: none;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .sectionpin {
@@ -545,7 +567,7 @@ span {
     justify-content: space-between;
   }
   .nav-container .homeBtn {
-    display: block;
+    display: none;
   }
   .home .title-subtitle {
     margin-bottom: 5em;
@@ -602,6 +624,21 @@ span {
   }
 }
 @media screen and (min-width: 1440px) {
+  .socials-nav .social-container {
+    width: 200px;
+    height: 35px;
+  }
+  .socials-nav .social-container .nickname {
+    font-size: 1.2rem;
+  }
+  .socials-nav .socials-list {
+    width: 200px;
+    height: 35px;
+  }
+  .socials-nav .socials-list .social-icon {
+    width: 20px;
+    height: 20px;
+  }
   .home {
     width: 80%;
     display: grid;
