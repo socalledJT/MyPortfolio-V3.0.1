@@ -131,6 +131,12 @@ span {
   height: 15px;
 }
 
+.bgFigure {
+  width: 120%;
+  height: 200px;
+  animation: fadeIn linear 2s;
+}
+
 .home {
   margin-top: 5em;
   margin-left: auto;
@@ -569,6 +575,23 @@ span {
   .nav-container .homeBtn {
     display: none;
   }
+  .f1 {
+    transform: rotate(35deg);
+    background-color: var(--socials-background);
+    margin-top: -2em;
+    position: absolute;
+    top: 5em;
+    z-index: -1;
+  }
+  .f2 {
+    transform: rotate(-35deg);
+    background-color: var(--socials-background);
+    width: 150%;
+    position: absolute;
+    left: -15em;
+    bottom: 2em;
+    z-index: -1;
+  }
   .home .title-subtitle {
     margin-bottom: 5em;
   }
@@ -638,6 +661,21 @@ span {
   .socials-nav .socials-list .social-icon {
     width: 20px;
     height: 20px;
+  }
+  .f1 {
+    transform: rotate(25deg);
+    background-color: var(--socials-background);
+    margin-top: -2em;
+    position: absolute;
+    z-index: -1;
+  }
+  .f2 {
+    transform: rotate(-25deg);
+    background-color: var(--socials-background);
+    position: absolute;
+    left: -10em;
+    bottom: 2em;
+    z-index: -1;
   }
   .home {
     width: 80%;
