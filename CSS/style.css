@@ -1,5 +1,6 @@
 :root {
   --background-color: #082032;
+  --gradient-color: #27374D;
   --outliner-color: #26D8FF;
   --socials-background: #0C2F49;
   --infocard-background: #0B2538;
@@ -7,6 +8,9 @@
   --nav-icon-color: #0B2538;
   --white-color: #ffffff;
   --scrollbar-color: #116D6E;
+  --inputPlaceholder-color: #D8D9DA;
+  --stroke-color: #f1f1f1;
+  --nonActive-color: #D8D9DA;
 }
 
 /* > div {
@@ -22,7 +26,7 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-image: linear-gradient(to bottom right, var(--background-color), var(--gradient-color));
 }
 
 a {
@@ -131,12 +135,12 @@ span {
   height: 15px;
 }
 
-.bgFigure {
-  width: 120%;
-  height: 200px;
-  animation: fadeIn linear 2s;
-}
+/*.bgFigure {
+    width: 120%;
+    height: 200px;
 
+    animation: fadeIn linear 2s;
+}*/
 .home {
   margin-top: 5em;
   margin-left: auto;
@@ -181,9 +185,6 @@ span {
   margin-right: auto;
   margin-top: 15px;
 }
-.home .infocard .mainInfo-card, .home .infocard p {
-  text-align: center;
-}
 .home .infocard .btn-container {
   text-align: center;
 }
@@ -214,6 +215,63 @@ span {
   100% {
     opacity: 1;
   }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 105px;
+}
+
+.stroke {
+  display: block;
+  position: relative;
+  background-color: var(--stroke-color);
+  height: 80px;
+  width: 10px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: strokeAnimate 1.5s linear infinite;
+}
+
+@keyframes strokeAnimate {
+  50% {
+    height: 30px;
+    background-color: var(--nav-bar-color);
+  }
+  100% {
+    height: 80px;
+  }
+}
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.stroke:nth-child(7) {
+  animation-delay: 0s;
 }
 
 .nav-container {
@@ -339,7 +397,7 @@ span {
   scrollbar-width: none; /* for Firefox */
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10em;
+  margin-bottom: 20em;
 }
 .myWork #workCard1 {
   border-color: var(--outliner-color);
@@ -372,6 +430,30 @@ span {
 .myWork .workInfocard .workinfo {
   text-align: center;
 }
+.myWork .workInfocard .workinfo .projectImage {
+  width: 100%;
+  height: 37%;
+  animation: spin 2s infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.myWork .workInfocard .workinfo .projectDesciption {
+  width: 90%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.myWork .workInfocard .workinfo .projectDesciption p {
+  font-size: 0.9em;
+  margin-top: 4em;
+  letter-spacing: 2px;
+}
 .myWork .workInfocard .workbtn {
   display: flex;
   justify-content: space-around;
@@ -379,8 +461,8 @@ span {
 }
 .myWork .workInfocard .workbtn .useAppBtn {
   border: none;
-  background-color: var(--socials-background);
-  color: var(--nav-bar-color);
+  background-color: var(--background-color);
+  color: var(--nonActive-color);
 }
 .myWork .workInfocard .workbtn .useAppBtn:hover {
   background-color: var(--background-color);
@@ -391,6 +473,10 @@ span {
   color: var(--outliner-color);
 }
 .myWork .workInfocard .workbtn .seeMoreBtn:hover {
+  background-color: var(--background-color);
+}
+.myWork .workInfocard .workbtn .nonActiveBtn {
+  color: var(--nonActive-color);
   background-color: var(--background-color);
 }
 
@@ -406,7 +492,7 @@ span {
   max-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10em;
+  margin-bottom: 20em;
   display: grid;
   grid-template-rows: 25% 55% 20%;
   background-color: var(--infocard-background);
@@ -449,7 +535,7 @@ span {
   scrollbar-width: none; /* for Firefox */
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10em;
+  margin-bottom: 20em;
 }
 .mySkills .s-card1 {
   border: 1px solid var(--outliner-color);
@@ -535,9 +621,11 @@ span {
 }
 .email .input-text::-moz-placeholder {
   padding-left: 0.5em;
+  color: var(--inputPlaceholder-color);
 }
 .email .input-text::placeholder {
   padding-left: 0.5em;
+  color: var(--inputPlaceholder-color);
 }
 .email .context-input {
   margin-bottom: 1em;
@@ -552,9 +640,11 @@ span {
 }
 .email .context-input .input-textarea::-moz-placeholder {
   padding: 1em;
+  color: var(--inputPlaceholder-color);
 }
 .email .context-input .input-textarea::placeholder {
   padding: 1em;
+  color: var(--inputPlaceholder-color);
 }
 .email .input-button {
   width: 300px;
@@ -575,23 +665,24 @@ span {
   .nav-container .homeBtn {
     display: none;
   }
-  .f1 {
-    transform: rotate(35deg);
-    background-color: var(--socials-background);
-    margin-top: -2em;
-    position: absolute;
-    top: 5em;
-    z-index: -1;
+  /*.f1 {
+      transform: rotate(35deg);
+      background-color: var(--socials-background);
+      margin-top: -2em;
+      position: absolute;
+      top: 5em;
+      z-index: -1;
   }
+
   .f2 {
-    transform: rotate(-35deg);
-    background-color: var(--socials-background);
-    width: 150%;
-    position: absolute;
-    left: -15em;
-    bottom: 2em;
-    z-index: -1;
-  }
+      transform: rotate(-35deg);
+      background-color: var(--socials-background);
+      width: 150%;
+      position: absolute;
+      left: -15em;
+      bottom: 2em;
+      z-index: -1;
+  }*/
   .home .title-subtitle {
     margin-bottom: 5em;
   }
