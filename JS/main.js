@@ -18,6 +18,7 @@ for (var i = 0; i < navbarLinks.length; i++) {
 }
 
 
+//Scroll effect animation activation
 window.addEventListener('scroll', fadeInElements);
 
 function fadeInElements() {
@@ -35,6 +36,6 @@ function fadeInElements() {
   }
 }
 
-$("document").ready( function () {
-  alert('This website is still under construction. \nPlease understand you may experience missing information and/or browser issues');
-});
+// $("document").ready( function () {
+//   alert('This website is still under construction. \nPlease understand you may experience missing information and/or browser issues');
+// });

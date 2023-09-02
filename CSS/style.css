@@ -13,9 +13,6 @@
   --nonActive-color: #D8D9DA;
 }
 
-/* > div {
-    border: 1px solid white;
-}*/
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -135,12 +132,6 @@ span {
   height: 15px;
 }
 
-/*.bgFigure {
-    width: 120%;
-    height: 200px;
-
-    animation: fadeIn linear 2s;
-}*/
 .home {
   margin-top: 5em;
   margin-left: auto;
@@ -148,10 +139,6 @@ span {
   margin-bottom: 10em;
   width: 90%;
   animation: fadeIn linear 2s;
-  -webkit-animation: fadeIn linear 2s;
-  -moz-animation: fadeIn linear 2s;
-  -o-animation: fadeIn linear 2s;
-  -ms-animation: fadeIn linear 2s;
 }
 .home .title-subtitle {
   min-width: 300px;

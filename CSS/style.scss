@@ -1,3 +1,4 @@
+//Variables to save color hex codes
 :root {
     --background-color: #082032;
     --gradient-color: #27374D;
@@ -13,10 +14,13 @@
     --nonActive-color: #D8D9DA;
 }
 
-/* > div {
-    border: 1px solid white;
-}*/
+//Command used to test designs...
+// * > div {
+//     border: 1px solid white;
+// }
 
+
+//Design implementation that effects the whole page...
 *{
     scroll-behavior: smooth;
 
@@ -32,6 +36,7 @@ body {
     background-image: linear-gradient(to bottom right, var(--background-color), var(--gradient-color));
 }
 
+//Link design
 a {
     text-decoration: none;
     color: var(--white-color);
@@ -77,6 +82,7 @@ button:hover {
     transition: 500ms;
 }
 
+//Span design for linkin to them...
 span {
     color: white;
     content: "";
@@ -146,16 +152,6 @@ span {
     }
 }
 
-//Mobile Design of Home Section
-
-/*.bgFigure {
-    width: 120%;
-    height: 200px;
-
-    animation: fadeIn linear 2s;
-}*/
-
-
 .home {
     margin-top: 5em;
     margin-left: auto;
@@ -209,6 +205,7 @@ span {
     }
 
     .scroll-container {
+        width: -moz-fit-content; //Mozilla implementation of 'fit-content'
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
@@ -232,11 +229,11 @@ span {
         }
     }
 
-    animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
     -webkit-animation: fadeIn linear 2s;
     -moz-animation: fadeIn linear 2s;
     -o-animation: fadeIn linear 2s;
-    -ms-animation: fadeIn linear 2s;
+    animation: fadeIn linear 2s;
     
     //Animation for the Hero Home Section
     @keyframes fadeIn {
@@ -302,6 +299,7 @@ span {
     background: none;
     width: 80%;
     min-width: 300px;
+    height: -moz-fit-content;
     height: fit-content;
 
     display: flex;
@@ -426,7 +424,8 @@ span {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    overflow-x: scroll;
+    
+    overflow-x: scroll; //for chrome
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
 
@@ -600,7 +599,7 @@ span {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    overflow-x: scroll;
+    overflow-x: scroll; //for chrome
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
 
@@ -901,6 +900,7 @@ span {
 
         .title-subtitle {
             margin: 12em 0 0 0;
+            height: -moz-fit-content; //for mozilla
             height: fit-content;
 
             .title {
