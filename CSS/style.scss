@@ -152,6 +152,73 @@ span {
     }
 }
 
+
+.nav-container {
+    //background-color: var(--outliner-color);
+    background: none;
+    width: 80%;
+    min-width: 300px;
+    height: -moz-fit-content;
+    height: fit-content;
+
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 3em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    z-index: 99;
+}
+
+.navbar {
+    background-color: var(--nav-bar-color);
+    width: 300px;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+    border-radius: 10px;
+}
+  
+//Navigation container styling
+.navbar a {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+  
+.navbar a.active {
+    background-color: var(--background-color);
+    width: 50px;
+    height: 35px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+  
+.navbar a i {
+    color: var(--background-color);
+    background: none;
+}
+  
+.navbar a.active i {
+    color: var(--nav-bar-color);
+    transition: 0.5s;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    background: none;
+}
+
 .home {
     margin-top: 5em;
     margin-left: auto;
@@ -294,120 +361,7 @@ span {
     animation-delay: 0s;
 }
 
-.nav-container {
-    //background-color: var(--outliner-color);
-    background: none;
-    width: 80%;
-    min-width: 300px;
-    height: -moz-fit-content;
-    height: fit-content;
-
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    bottom: 3em;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-
-    z-index: 99;
-}
-
-.navbar {
-    background-color: var(--nav-bar-color);
-    width: 300px;
-    height: 45px;
-    display: flex;
-    justify-content: space-around;
-
-    align-items: center;
-    border-radius: 10px;
-}
-  
-.navbar a {
-    background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-  
-.navbar a.active {
-    background-color: var(--background-color);
-    width: 50px;
-    height: 35px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-  
-.navbar a i {
-    color: var(--background-color);
-    background: none;
-}
-  
-.navbar a.active i {
-    color: var(--nav-bar-color);
-    transition: 0.5s;
-}
-
-.icon {
-    width: 25px;
-    height: 25px;
-    background: none;
-}
-
-.homeBtn {
-    width: 45px;
-    height: 45px;
-    background-color: var(--nav-bar-color);
-
-    align-items: center;
-    border-radius: 10px;
-
-    display: none;
-}
-
-.homeBtn a {
-    background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-
-}
-
-.homeBtn a:hover {
-    background-color: var(--background-color);
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-.homeBtn a i {
-    color: var(--background-color);
-    background: none;
-}
-
-.homeBtn a:hover i {
-    color: var(--nav-bar-color);
-    transition: 0.5s;
-}
-
-.upBtn {
-    width: 25px;
-    height: 25px;
-    background: none;
-}
-
-//Mobile & Desktop Design of 'MyWork' Section
-
 //fade in function for all other parts of the website.
-
 .fade-in {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
@@ -415,8 +369,10 @@ span {
 
 .sectionpin {
     margin-bottom: 3em;
-}
 
+
+}
+//Mobile & Desktop Design of 'MyWork' Section
 .myWork {
     min-width: 300px;
     width: 80%;
@@ -647,8 +603,8 @@ span {
 
         .skillIcon {
             margin: 1em;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
         }
     }
 
