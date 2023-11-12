@@ -1,3 +1,18 @@
+function fadeInElements() {
+  var elements = document.querySelectorAll(".fade-in");
+
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    var elementPosition = element.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+
+    if (elementPosition < screenHeight) {
+      element.style.opacity = 1;
+      element.classList.remove(".fade-in");
+    }
+  }
+}
+
 // Function to get the navigation bar working with changing colors
 // Get the navbar links
 var navbarLinks = document
@@ -53,22 +68,3 @@ changeIconColorOnScroll();
 //Function to fade elements in when the user scrolls down
 //Scroll effect animation activation
 window.addEventListener("scroll", fadeInElements);
-
-function fadeInElements() {
-  var elements = document.querySelectorAll(".fade-in");
-
-  for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
-    var elementPosition = element.getBoundingClientRect().top;
-    var screenHeight = window.innerHeight;
-
-    if (elementPosition < screenHeight) {
-      element.style.opacity = 1;
-      element.classList.remove(".fade-in");
-    }
-  }
-}
-
-// $("document").ready( function () {
-//   alert('This website is still under construction. \nPlease understand you may experience missing information and/or browser issues');
-// });

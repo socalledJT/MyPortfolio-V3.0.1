@@ -738,25 +738,6 @@ span {
         }
     }
 
-    /*.f1 {
-        transform: rotate(35deg);
-        background-color: var(--socials-background);
-        margin-top: -2em;
-        position: absolute;
-        top: 5em;
-        z-index: -1;
-    }
-    
-    .f2 {
-        transform: rotate(-35deg);
-        background-color: var(--socials-background);
-        width: 150%;
-        position: absolute;
-        left: -15em;
-        bottom: 2em;
-        z-index: -1;
-    }*/
-
     .home {
 
         .title-subtitle {
@@ -828,6 +809,10 @@ span {
     .seeMoreBtn {
         width: 100px;
         height: 30px;
+    }
+
+    #emailMe {
+        margin-bottom: 5em;
     }
 }
 

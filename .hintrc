@@ -11,6 +11,7 @@
           "height: fit-content"
         ]
       }
-    ]
+    ],
+    "leading-dot-classlist": "off"
   }
 }

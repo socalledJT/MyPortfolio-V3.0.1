@@ -623,24 +623,6 @@ span {
   .nav-container .homeBtn {
     display: none;
   }
-  /*.f1 {
-      transform: rotate(35deg);
-      background-color: var(--socials-background);
-      margin-top: -2em;
-      position: absolute;
-      top: 5em;
-      z-index: -1;
-  }
-
-  .f2 {
-      transform: rotate(-35deg);
-      background-color: var(--socials-background);
-      width: 150%;
-      position: absolute;
-      left: -15em;
-      bottom: 2em;
-      z-index: -1;
-  }*/
   .home .title-subtitle {
     margin-bottom: 5em;
   }
@@ -693,6 +675,9 @@ span {
   .seeMoreBtn {
     width: 100px;
     height: 30px;
+  }
+  #emailMe {
+    margin-bottom: 5em;
   }
 }
 @media screen and (min-width: 1440px) {
