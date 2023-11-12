@@ -14,9 +14,13 @@
     --nonActive-color: #D8D9DA;
 }
 
-// //Command used to test designs...
+//Command used to test designs...
 // * > div {
 //     border: 1px solid white;
+// }
+
+// * > section {
+//     border: 1px solid red;
 // }
 
 
@@ -34,6 +38,19 @@
 
 body {
     background-image: linear-gradient(to bottom right, var(--background-color), var(--gradient-color));
+}
+
+//Added sections for better visuality as well as cleaner code!
+section {
+    //Setting height and width of sections containing web data
+    min-height: 100vh;;
+    max-height: max-content;
+    width: 100%;
+
+    // Centering data of each section horizontally and vertically
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 //Link design
@@ -220,11 +237,9 @@ span {
 }
 
 .home {
-    margin-top: 5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10em;
     width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
 
     .title-subtitle {
         min-width: 300px;
@@ -385,10 +400,6 @@ span {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20em;
-
     #workCard1 {
         border-color: var(--outliner-color);
         border-radius: 20px 0 20px 0;
@@ -520,9 +531,6 @@ span {
     max-width: 1150px;
     min-height: 416px;
     max-height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20em;
 
     display: grid;
     grid-template-rows: 25% 55% 20%;
@@ -577,10 +585,6 @@ span {
     overflow-x: scroll; //for chrome
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20em;
 
     .s-card1 {
         border: 1px solid var(--outliner-color);
@@ -638,12 +642,7 @@ span {
     width: 80%;
     max-width: 1536px;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10em;
-
     text-align: center;
-
 
     .email-title {
         margin: 2em;
@@ -715,6 +714,11 @@ span {
 }
 
 @media screen and (min-width: 820px) {
+
+    //Adding some distance from the top to the first section
+    #home {
+        margin-top: 2em;    
+    }
 
     button {
         width: 180px;

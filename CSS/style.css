@@ -26,6 +26,16 @@ body {
   background-image: linear-gradient(to bottom right, var(--background-color), var(--gradient-color));
 }
 
+section {
+  min-height: 100vh;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
   color: var(--white-color);
@@ -194,11 +204,9 @@ span {
 }
 
 .home {
-  margin-top: 5em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10em;
   width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
   animation: fadeIn linear 2s;
 }
 .home .title-subtitle {
@@ -340,9 +348,6 @@ span {
   overflow-x: scroll;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20em;
 }
 .myWork #workCard1 {
   border-color: var(--outliner-color);
@@ -449,9 +454,6 @@ span {
   max-width: 1150px;
   min-height: 416px;
   max-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20em;
   display: grid;
   grid-template-rows: 25% 55% 20%;
   background-color: var(--infocard-background);
@@ -492,9 +494,6 @@ span {
   overflow-x: scroll;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20em;
 }
 .mySkills .s-card1 {
   border: 1px solid var(--outliner-color);
@@ -541,9 +540,6 @@ span {
   min-width: 300px;
   width: 80%;
   max-width: 1536px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10em;
   text-align: center;
 }
 .email .email-title {
@@ -611,6 +607,9 @@ span {
 }
 
 @media screen and (min-width: 820px) {
+  #home {
+    margin-top: 2em;
+  }
   button {
     width: 180px;
     height: 35px;
