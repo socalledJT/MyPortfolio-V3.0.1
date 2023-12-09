@@ -241,6 +241,9 @@ span {
   margin-right: auto;
   margin-top: 15px;
 }
+.home .infocard .mainInfo-card {
+  overflow-y: hidden;
+}
 .home .infocard .btn-container {
   text-align: center;
 }
@@ -352,14 +355,17 @@ span {
 .myWork #workCard1 {
   border-color: var(--outliner-color);
   border-radius: 20px 0 20px 0;
+  overflow-y: hidden;
 }
 .myWork #workCard2 {
   border-color: var(--white-color);
   border-radius: 20px;
+  overflow-y: hidden;
 }
 .myWork #workCard3 {
   border-color: var(--nav-bar-color);
   border-radius: 0 20px 0 20px;
+  overflow-y: hidden;
 }
 .myWork .workInfocard {
   width: 300px;

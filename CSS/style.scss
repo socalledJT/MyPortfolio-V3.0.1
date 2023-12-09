@@ -280,6 +280,9 @@ span {
             }
         }
 
+        .mainInfo-card {
+            overflow-y: hidden ;
+        }
 
         .btn-container {
             text-align: center;
@@ -403,16 +406,19 @@ span {
     #workCard1 {
         border-color: var(--outliner-color);
         border-radius: 20px 0 20px 0;
+        overflow-y: hidden;
     }
 
     #workCard2 {
         border-color: var(--white-color);
         border-radius: 20px;
+        overflow-y: hidden;
     }
 
     #workCard3 {
         border-color: var(--nav-bar-color);
         border-radius: 0 20px 0 20px;
+        overflow-y: hidden;
     }
 
     .workInfocard {
