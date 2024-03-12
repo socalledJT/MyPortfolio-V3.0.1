@@ -403,11 +403,14 @@ span {
   border-radius: 100%;
   margin-top: 2em;
 }
-.myWork .workInfocard .workinfo .projectLanguages .reactBall {
+.myWork .workInfocard .workinfo .projectLanguages .firstBall {
   background-color: var(--outliner-color);
 }
-.myWork .workInfocard .workinfo .projectLanguages .rapidBall {
+.myWork .workInfocard .workinfo .projectLanguages .secondBall {
   background-color: var(--white-color);
+}
+.myWork .workInfocard .workinfo .projectLanguages .thirdBall {
+  background-color: var(--nav-bar-color);
 }
 .myWork .workInfocard .workinfo .projectLanguages p {
   margin-top: 2em;

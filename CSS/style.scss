@@ -464,12 +464,16 @@ span {
                     margin-top: 2em;
                 }
 
-                .reactBall {
+                .firstBall {
                     background-color: var(--outliner-color);
                 }
 
-                .rapidBall {
+                .secondBall {
                     background-color: var(--white-color);
+                }
+
+                .thirdBall {
+                    background-color: var(--nav-bar-color);
                 }
 
                 p {
