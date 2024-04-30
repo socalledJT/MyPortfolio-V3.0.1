@@ -1,3 +1,10 @@
+window.onload = function () {
+  alert(
+    "Please note that this website is not 100% complete. Thank you for your understanding!"
+  );
+};
+
+// Get the canvas and context objects
 function fadeInElements() {
   var elements = document.querySelectorAll(".fade-in");
 
